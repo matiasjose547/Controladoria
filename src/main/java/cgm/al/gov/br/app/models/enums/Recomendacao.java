@@ -1,4 +1,4 @@
-package br.com.sgci.persistence.models.enums;
+package cgm.al.gov.br.app.models.enums;
 
 public enum Recomendacao {
     /**

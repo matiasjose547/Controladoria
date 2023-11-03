@@ -1,8 +1,8 @@
-package br.com.sgci.persistence.models;
+package cgm.al.gov.br.app.models;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Data
 @Entity

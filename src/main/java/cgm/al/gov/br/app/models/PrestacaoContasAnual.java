@@ -1,12 +1,11 @@
-package br.com.sgci.persistence.models;
+package cgm.al.gov.br.app.models;
 
-import br.com.sgci.persistence.models.enums.Situacao;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import java.util.Date;
 
 @Data

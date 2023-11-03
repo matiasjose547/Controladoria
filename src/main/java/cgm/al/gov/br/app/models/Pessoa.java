@@ -1,9 +1,9 @@
-package br.com.sgci.persistence.models;
+package cgm.al.gov.br.app.models;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
 import java.util.Date;
 
 @Data

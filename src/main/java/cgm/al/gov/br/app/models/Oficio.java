@@ -1,10 +1,9 @@
-package br.com.sgci.persistence.models;
+package cgm.al.gov.br.app.models;
 
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 import java.util.List;
 

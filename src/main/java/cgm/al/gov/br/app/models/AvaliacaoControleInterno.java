@@ -1,16 +1,13 @@
-package br.com.sgci.persistence.models;
+package cgm.al.gov.br.app.models;
 
 
-import br.com.sgci.persistence.models.enums.Recomendacao;
-import br.com.sgci.persistence.models.enums.Tipo;
+import cgm.al.gov.br.app.models.enums.Recomendacao;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
-import java.math.MathContext;
-import java.math.RoundingMode;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;

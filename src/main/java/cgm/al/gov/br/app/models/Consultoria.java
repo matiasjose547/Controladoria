@@ -1,9 +1,9 @@
-package br.com.sgci.persistence.models;
+package cgm.al.gov.br.app.models;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
