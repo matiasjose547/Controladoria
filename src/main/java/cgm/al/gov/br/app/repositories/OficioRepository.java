@@ -1,7 +1,12 @@
 package cgm.al.gov.br.app.repositories;
 
 import cgm.al.gov.br.app.models.Oficio;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface OficioRepository extends Repository<Oficio, Long> {
+import java.util.List;
+
+@Repository
+public interface OficioRepository extends JpaRepository<Oficio, Long> {
+    List<Oficio> findAll();
 }

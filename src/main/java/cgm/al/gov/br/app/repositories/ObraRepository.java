@@ -1,7 +1,9 @@
 package cgm.al.gov.br.app.repositories;
 
 import cgm.al.gov.br.app.models.Obra;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ObraRepository extends Repository<Obra, Long> {
+@Repository
+public interface ObraRepository extends JpaRepository<Obra, Long> {
 }

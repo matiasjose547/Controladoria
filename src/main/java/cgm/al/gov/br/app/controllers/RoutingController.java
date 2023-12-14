@@ -12,7 +12,7 @@ public class RoutingController {
 
     @GetMapping
     public String index(){
-        return "index.html";
+        return "aci.html";
     }
     @GetMapping("/aci")
     public ModelAndView getAci(Model model){
