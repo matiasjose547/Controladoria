@@ -19,10 +19,109 @@
    <aside th:replace="~{fragments/sidebar :: sidebar}" class="main-sidebar sidebar-dark-primary elevation-4">
    </aside>
 <!--    -->
-<!--   ndash; Content Wrapper. Contains page content &ndash;&gt;-->
-   <div th:replace="~{fragments/tables :: oficio_table}" class="content-wrapper">-->
-   </div>
-<!--    &ndash; /.content-wrapper &ndash-->
+
+    <!-- Content Wrapper. Contains page content -->
+    <div th:fragment="oficio_table" class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Ofícios</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a th:href="@{/app}">Inicio</a></li>
+                            <li class="breadcrumb-item active">Ofícios</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+
+
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Ofícios</h3>
+
+                                <div class="card-tools">
+                                    <div class="input-group input-group-sm" style="width: 150px;">
+                                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-default">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                        <button type="button" data-toggle="modal" data-target="#staticBackdrop" class="btn btn-secondary">Adicionar <i class="fas fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body table-responsive p-0" style="height: 500px;">
+                                <table class="table table-head-fixed text-nowrap">
+                                    <thead>
+                                    <tr>
+                                        <th>Número</th>
+                                        <th>Processo</th>
+                                        <th>Data</th>
+                                        <th>Objeto</th>
+                                        <th>Orgão de destino</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="oficio : ${oficioList}">
+                                            <td th:text="${oficio.numero}">Número</td>
+                                            <td th:text="${oficio.processo}">Processo</td>
+                                            <td th:text="${#dates.format(oficio.data, 'dd/MM/yyyy')}">Data</td>
+                                            <td th:text="${oficio.objeto.substring(0,30).concat('...')}">Objeto</td>
+                                            <td th:text="${oficio.orgaoDestino.sigla}">Orgão destino</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+<!--    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">-->
+<!--        Launch static backdrop modal-->
+<!--    </button>-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <!--    -->
     <footer th:replace="~{fragments/footer :: footer}" class="main-footer"></footer>
 

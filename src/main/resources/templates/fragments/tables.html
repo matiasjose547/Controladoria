@@ -184,12 +184,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    <tr th:each="oficio : ${oficios}">
-                                    <td>${oficio.numero}</td>
-                                    <td>${oficio.}</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-success">Approved</span></td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                    <tr data-th-each="oficio : ${oficios}">
+                                    <td data-th-text="${oficio.numero}"></td>
+
+
                                 </tr>
 
                                 </tbody>

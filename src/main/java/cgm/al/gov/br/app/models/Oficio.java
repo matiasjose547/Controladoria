@@ -12,9 +12,7 @@ import java.util.List;
 @Data
 public class Oficio extends AbstractEntity {
     private Integer numero;
-    @Lob
-    @Column(length = 512)
-    @Length(message="Você atingiu o máximo de 512 caracteres.")
+    @Column(columnDefinition = "TEXT")
     private String processo;
     @Temporal(TemporalType.DATE)
     private Date data;

@@ -19,10 +19,10 @@ public class AvaliacaoControleInterno extends AbstractEntity {
     private Integer numero;
     @Temporal(TemporalType.DATE)
     private Date data;
-    @Lob
+
     @NotNull(message = "O campo processo não pode ser nulo.")
     @NotBlank(message = "O campo processo não pode estar em branco.")
-    @Column(nullable = false, unique = true,length = 512)
+    @Column(columnDefinition = "TEXT",nullable = false, unique = true,length = 512)
     private String processo;
 
     private String tipo;

@@ -19,10 +19,10 @@ public class RoutingController {
         return new ModelAndView("aci.html");
     }
 
-    @GetMapping(value = "/oficios")
-    public ModelAndView getOficios(){
-        return new ModelAndView("oficios.html");
-    }
+//    @GetMapping(value = "/oficios")
+//    public ModelAndView getOficios(){
+//        return new ModelAndView("oficios.html");
+//    }
     @GetMapping("/adiantamentos")
     public ModelAndView getAdiantamentos(){
         return new ModelAndView("adiantamentos.html");
