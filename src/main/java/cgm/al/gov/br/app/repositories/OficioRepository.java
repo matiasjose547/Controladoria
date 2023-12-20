@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface OficioRepository extends JpaRepository<Oficio, Long> {
-    List<Oficio> findAll();
+
 }
