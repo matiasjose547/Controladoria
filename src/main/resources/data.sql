@@ -53,3 +53,24 @@ insert into obra(numero,ano, objeto, empresa_id, data_inicio, data_prevista_term
 insert into obra(numero,ano, objeto, empresa_id, data_inicio, data_prevista_termino, valor_total, valor_pago, situacao) values ('27','2016/01/01','Construção de banheiros públicos na orla marítima de Maceió Pendências para emissão de RAE em 2021/06/07..',	1,'2016/12/30','2021/12/31',410000.00,175661.31,'CONCLUÍDA'	);
 insert into obra(numero,ano, objeto, empresa_id, data_inicio, data_prevista_termino, valor_total, valor_pago, situacao) values ('28','2017/01/01','Implantação e/ou modernização de infraestrutura esportiva',	1,'13/10/2017','2021/10/13', 489942.50,0.00,'PARALISADA'	);
 
+
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (1, 'ABC123', '2023-01-01', 'Objeto 1', 100);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (2, 'XYZ456', '2023-02-15', 'Objeto 2', 200);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (3, 'DEF789', '2023-03-20', 'Objeto 3', 150);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (4, 'GHI321', '2023-04-05', 'Objeto 4', 250);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (5, 'JKL654', '2023-05-10', 'Objeto 5', 300);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (6, 'MNO987', '2023-06-25', 'Objeto 6', 180);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (7, 'PQR123', '2023-07-03', 'Objeto 7', 220);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (8, 'STU456', '2023-08-12', 'Objeto 8', 120);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (9, 'VWX789', '2023-09-18', 'Objeto 9', 270);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (10, 'YZA123', '2023-10-22', 'Objeto 10', 190);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (11, 'BCD456', '2023-11-30', 'Objeto 11', 320);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (12, 'EFG789', '2023-12-10', 'Objeto 12', 140);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (13, 'HIJ321', '2024-01-05', 'Objeto 13', 230);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (14, 'KLM654', '2024-02-20', 'Objeto 14', 160);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (15, 'NOP987', '2024-03-15', 'Objeto 15', 280);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (16, 'QRS123', '2024-04-28', 'Objeto 16', 200);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (17, 'TUV456', '2024-05-10', 'Objeto 17', 340);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (18, 'WXYZ89', '2024-06-22', 'Objeto 18', 260);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (19, 'ABC000', '2024-07-17', 'Objeto 19', 310);
+INSERT INTO oficio (numero, processo, data, objeto, orgaodestino) VALUES (20, 'XYZ111', '2024-08-30', 'Objeto 20', 170);

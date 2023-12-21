@@ -2,6 +2,7 @@ package cgm.al.gov.br.app.controllers;
 
 import cgm.al.gov.br.app.models.Oficio;
 import cgm.al.gov.br.app.services.OficioService;
+import cgm.al.gov.br.app.services.UnidadeGestoraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,8 @@ import java.util.List;
 public class OficioController {
     @Autowired
     private OficioService oficioService;
+    @Autowired
+    private UnidadeGestoraService ugService;
     private List<Oficio> oficioList;
 
     @GetMapping
@@ -24,6 +27,7 @@ public class OficioController {
         ModelAndView mv = new ModelAndView();
         oficioList = oficioService.findAll();
         mv.addObject("oficioList", oficioList);
+        mv.addObject("ugList", ugService.findAll());
         return mv;
     }
     @PostMapping

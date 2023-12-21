@@ -49,24 +49,29 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Ofícios</h3>
 
-                                <div class="card-tools">
-                                    <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                    <h3 class="card-title">Ofícios</h3>
 
-                                        <div class="input-group-append">
-                                            <button type="submit" class="btn btn-default">
-                                                <i class="fas fa-search"></i>
-                                            </button>
+                                    <div class="card-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-default">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button type="button" data-toggle="modal" data-target="#staticBackdrop" class="btn btn-secondary">
+                                                    Adicionar <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <button type="button" data-toggle="modal" data-target="#staticBackdrop" class="btn btn-secondary">Adicionar <i class="fas fa-plus"></i></button>
                                     </div>
-                                </div>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body table-responsive p-0" style="height: 500px;">
-                                <table class="table table-head-fixed text-nowrap">
+                                <table class="table table-hover table-head-fixed text-nowrap">
                                     <thead>
                                     <tr>
                                         <th>Número</th>
@@ -81,7 +86,7 @@
                                             <td th:text="${oficio.numero}">Número</td>
                                             <td th:text="${oficio.processo}">Processo</td>
                                             <td th:text="${#dates.format(oficio.data, 'dd/MM/yyyy')}">Data</td>
-                                            <td th:text="${oficio.objeto.substring(0,30).concat('...')}">Objeto</td>
+                                            <td th:text="${oficio.objeto}">Objeto</td>
                                             <td th:text="${oficio.orgaoDestino.sigla}">Orgão destino</td>
                                         </tr>
                                     </tbody>
@@ -107,18 +112,43 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Cadastro de Ofício</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
-                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-floating mb-3">
+                            <label for="inputNumero">Número</label>
+                            <input type="number" class="form-control" id="inputNumero" >
+                        </div>
+                        <div class="form-floating">
+                            <label for="inputProcesso">Processo</label>
+                            <input type="text" class="form-control" id="inputProcesso" placeholder="Número do processo">
+                        </div>
+                        <div class="form-floating mb-3">
+                            <label for="inputData">Data</label>
+                            <input type="date" class="form-control" id="inputData" >
+                        </div>
+                        <div class="form-floating">
+                            <label for="inputObjeto">Objeto</label>
+                            <textarea type="text" class="form-control" id="inputObjeto" placeholder="Objeto do ofício" ></textarea>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <label for="inputOrgaoDestino">Orgão destino</label>
+                            <select class="form-control form-select"  id="inputOrgaoDestino" aria-label="Default select example">
+                                <option th:each="ug : ${ugList}" th:value="${ug.id}" th:text="${ug.nome}">
+                                </option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success">Adicionar</button>
+                    </div>
+            </form>
             </div>
         </div>
     </div>
